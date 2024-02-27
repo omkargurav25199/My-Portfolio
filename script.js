@@ -72,6 +72,41 @@ circleflat();
 circleMouseFollower();
 firstpage();
 
+
+// Function to get the current time
+function getCurrentTime() {
+    var currentDate = new Date();
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+
+    // Format the time as HH:MM AM/PM
+    var timeString = hours % 12 + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + (hours >= 12 ? 'PM' : 'AM');
+
+    // Update the content of the #currentTime element
+    document.getElementById('currentTime').innerText = timeString;
+}
+
+// Call the function to update the time immediately
+getCurrentTime();
+
+// Update the time every second
+setInterval(getCurrentTime, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Select 3 elementes and use mousemove on three elements, find out the position of mouse, that is find mouse x and y cordinate, 
 //Now instead of mouse position show image and move image. Move image while rotating it.
 

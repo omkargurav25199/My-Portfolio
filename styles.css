@@ -228,6 +228,12 @@ html, body{
     padding-bottom: 6vw;
 }
 
+#subscribe a{
+    background-color: black;
+    color: #fff;
+    
+}
+
 #subscrine h5{
     text-transform: uppercase;
     opacity: 0.6;

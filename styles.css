@@ -45,13 +45,30 @@ html, body{
     background-color: black;
 }
 
+
+
 #fs{
     width:100%;
-    height: 100%;
+    height: 100vh;
     background-color: white;
     position: absolute;
-    
+    color: black;
 }
+
+
+
+#fs h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    font-weight: 500;
+    color: #5f5f5f;
+
+}
+
+
 
 #cover{
     width: 100%;
@@ -190,12 +207,14 @@ html, body{
     padding: 3.5vw 3vw;
     padding-right: 0;
     border-top: 1px solid #888;
+    text-decoration: none;
 }
 
 .elem h1{
     text-transform: uppercase;
     font-size: 4.5vw;
     opacity: 0.7;
+    
 }
 
 .elemlast{

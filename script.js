@@ -10,7 +10,7 @@ tl
 .to("#cover",{
     height: "100%",
     duration: 1,
-    delay: -2,
+    delay: -1,
     ease: Expo.easeInOut
 })
 
@@ -32,6 +32,7 @@ function firstpage(){
         y: '-10',
         opacity: 0,
         duration: 1,
+        delay: 1.5,
         ease: Expo.easeInOut
     })
 

@@ -1,4 +1,25 @@
+var tl= gsap.timeline();
 
+tl
+.to("#fs",{
+    height: 0,
+    duration: 2,
+    ease: Expo.easeInOut
+})
+
+.to("#cover",{
+    height: "100%",
+    duration: 1,
+    delay: -2,
+    ease: Expo.easeInOut
+})
+
+.to("#black",{
+    height: "100%",
+    duration: 1,
+    delay: -0.7,
+    ease: Expo.easeInOut
+})
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -110,38 +131,30 @@ firstpage();
 // Select 3 elementes and use mousemove on three elements, find out the position of mouse, that is find mouse x and y cordinate, 
 //Now instead of mouse position show image and move image. Move image while rotating it.
 
-document.querySelectorAll(".elem").forEach(function (elem){
-    var rotate =0;
-    var diffrot=0;
-
+document.querySelectorAll(".elem").forEach(function (elem) {
+    var rotate = 0;
+    var diffrot = 0;
+  
     elem.addEventListener("mouseleave", function (dets) {
-        
-        
-         
-        gsap.to(elem.querySelector("img"),{
-            opacity: 0,
-            ease: Power3,
-            duration: 0.5,
-            
-        })
-
+      gsap.to(elem.querySelector("img"), {
+        opacity: 0,
+        ease: Power3,
+        duration: 0.5,
+      });
     });
-
-
-
+  
     elem.addEventListener("mousemove", function (dets) {
-        
-        var diff = dets.clientY - elem.getBoundingClientRect().top;
-         diffrot= dets.clientX - rotate;
-         rotate = dets.clientX;
-         
-        gsap.to(elem.querySelector("img"),{
-            opacity: 1,
-            ease: Power3,
-            top: diff,
-            left: dets.clientX,
-            rotate: gsap.utils.clamp(-20,20, diffrot *0.5),
+      var diff = dets.clientY - elem.getBoundingClientRect().top;
+      diffrot = dets.clientX - rotate;
+      rotate = dets.clientX;
+      gsap.to(elem.querySelector("img"), {
+        opacity: 1,
+        ease: Power3,
+        top: diff,
+        left: dets.clientX,
+        rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
         })
+        
 
     });
 });

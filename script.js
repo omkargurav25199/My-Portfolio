@@ -31,7 +31,7 @@ function revealToSpan(){
         spanParent.classList.add("parent");
         spanchild.classList.add("child");
     
-        spanchild.textContent = elem.textContent;
+        spanchild.innerHTML = elem.innerHTML;
         spanParent.appendChild(spanchild);
     
         // elem replaces its values with parent span

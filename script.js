@@ -3,23 +3,60 @@ var tl= gsap.timeline();
 tl
 .to("#fs",{
     height: 0,
-    duration: 2,
+    duration: 3,
     ease: Expo.easeInOut
 })
 
 .to("#cover",{
     height: "100%",
     duration: 1,
-    delay: -1,
+    delay: -0.5,
     ease: Expo.easeInOut
 })
 
 .to("#black",{
     height: "100%",
     duration: 1,
-    delay: -0.7,
+    delay: -0.5,
     ease: Expo.easeInOut
+});
+
+function revealToSpan(){
+    document.querySelectorAll(".reveal").forEach(function(elem){
+        // create two spans
+        let spanParent = document.createElement("span");
+        let spanchild = document.createElement("span");
+    
+        // parent and child both set their respective classes
+        spanParent.classList.add("parent");
+        spanchild.classList.add("child");
+    
+        spanchild.textContent = elem.textContent;
+        spanParent.appendChild(spanchild);
+    
+        // elem replaces its values with parent span
+    
+        elem.innerHTML="";
+    
+        elem.appendChild(spanParent);
+    
+    
+    });
+}
+
+
+revealToSpan();
+
+gsap.to(".parent .child", {
+    y: "-100%",
+    duration:1.7,
+    delay:0.1,
+    ease: Circ.easeInOut
+
 })
+
+
+
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -32,13 +69,13 @@ function firstpage(){
         y: '-10',
         opacity: 0,
         duration: 1,
-        delay: 1.5,
+        delay: 1.9,
         ease: Expo.easeInOut
     })
 
     tl.to(".boundingelem",{
         y: 0,
-        duration: 1,
+        duration: 1.8,
         delay: -0.5,
         ease: Expo.easeInOut,
         stagger: 0.2

@@ -76,7 +76,7 @@ function firstpage(){
     tl.to(".boundingelem",{
         y: 0,
         duration: 1.8,
-        delay: -0.5,
+        delay: -0.6,
         ease: Expo.easeInOut,
         stagger: 0.2
     })

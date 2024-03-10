@@ -27,7 +27,7 @@ html, body{
 }
 
 .bounding .boundingelem{
-    transform: translateY(100%);
+    transform: translateY(130%);
 }
 
 #main{
@@ -186,6 +186,16 @@ html, body{
     margin-top: 0.5vw;
 }
 
+
+#social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+
 #herofooter{
     padding: 0 2vw;
     width: 100%;
@@ -267,6 +277,7 @@ html, body{
 }
 
 #about{
+    margin-top: 180px;
     color: #fff;
     display: flex;
     align-items: center;
@@ -360,7 +371,7 @@ html, body{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -369,5 +380,4 @@ html, body{
     margin-right: 10px;
     gap: 20px;
 }
-
 
